@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection aléatoire</title>
+    <script>
+        function redirectRandomly() {
+            // Les URLs des trois Google Forms
+            var forms = [
+                "https://docs.google.com/forms/d/e/1FAIpQLSfCM9NwGUwm5q_P8cr0YZEwIIbPCPt5ui6u0qYfjg-yCnKngw/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSfzipgbzm5IdGpxsezh8AHBjCFlgs3g79P5YoH07-3tk10Vhg/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSdu2lklf6nMmsH5w3G0jXPGJafUqZ5mXPDeOMxAz1T4nLOG8w/viewform?usp=sf_link"
+            ];
+            // Choix aléatoire
+            var randomIndex = Math.floor(Math.random() * forms.length);
+            var randomChoice = forms[randomIndex];
+            // Redirection
+            window.location.href = randomChoice;
+        }
+    </script>
+</head>
+<body onload="redirectRandomly()">
+    <p>Redirection en cours...</p>
+</body>
+</html>
